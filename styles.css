@@ -1,0 +1,27 @@
+* { box-sizing: border-box;
+}
+
+main {
+    box-sizing: border-box;
+    background-image: url("https://planet-skin.com/cdn/shop/files/1_10_2000x.jpg?v=1698236253");
+}
+
+header {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.logo {
+    max-width: 145px;
+}
