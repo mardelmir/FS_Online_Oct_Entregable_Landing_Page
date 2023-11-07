@@ -5,18 +5,19 @@ En este ejercicio, aprenderás a crear una página web replicando el diseño de 
 ## Instrucciones
 
 ## Instrucciones
-
+<!--Check -->
 1. Haz fork y clona este repositorio en tu entorno de desarrollo:
 
    ```
    git clone (url del repo del ejercicio)
    ```
-
+<!-- Check -->
 2. Utiliza los comandos necesarios en la consola de git para abrir el repositorio.
-
+<!-- Check -->
 3. Crea el archivo `index.html` en VSCode. Este será el punto de inicio para tu proyecto.
 
 4. Crea el código necesario para replicar el diseño de la imagen de referencia proporcionada en la carpeta `img`. Asegúrate de que el diseño sea fiel a la imagen, incluyendo la estructura del sitio, los colores y las fuentes.
+<!-- Check -->
 
 5. Implementa las siguientes media queries en tu CSS para adaptar el diseño en función del tamaño de la pantalla:
 
