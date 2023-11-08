@@ -22,9 +22,9 @@ En este ejercicio, aprenderás a crear una página web replicando el diseño de 
 5. Implementa las siguientes media queries en tu CSS para adaptar el diseño en función del tamaño de la pantalla:
 
    - Cuando la pantalla sea menor de 768px, el menú del navbar debe convertirse en un menú desplegable u oculto.
-   <!-- Check -->
+  
    - Cuando la pantalla sea inferior a 480px, el menú del navbar debe cambiar de color.
-   <!-- Check -->
+
 
 6. Cuando hayas completado el ejercicio, haz un commit y un push de tus cambios al repositorio.
 
