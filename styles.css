@@ -16,7 +16,7 @@ header {
     padding: 18px 30px;
 }
 
-/* Navbar grande */
+/* Navbar central */
 
 nav {
     display: flex;
@@ -77,13 +77,12 @@ a {
     text-decoration: none;
 }
 
-/* Navbar desplegado */
+/* Navbar desplegable oculto */
 
 .abrir,
 .cerrar {
     display: none;
 }
-
 
 /* Parte central */
 
@@ -208,7 +207,7 @@ a {
     }
 }
 
-/* Animación imagen de fondo */
+/* Animación fondo */
 
 @keyframes fondo {
     0% {
