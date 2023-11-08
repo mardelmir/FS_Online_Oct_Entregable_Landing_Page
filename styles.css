@@ -85,7 +85,7 @@ a {
 }
 
 
-/* Resto */
+/* Parte central */
 
 .principal {
     display: flex;
@@ -103,19 +103,18 @@ a {
 .texto {
     display: inline-block;
     margin-left: 3vw;
-    margin-bottom: 2vw;
+    margin-bottom: 3vw;
     padding: 20px;
     color: white;
     letter-spacing: .2em;
-    font-size: 18px;
+    font-size: 20px;
     background-color: transparent;
     transition: all .3s linear;
 }
 
 .texto>p:first-child {
-    font-size: 12px;
-    margin-bottom: 15px;
-
+    font-size: 10px;
+    margin-bottom: 20px;
 }
 
 .texto:hover {
@@ -126,7 +125,7 @@ a {
 
 /* Tag Planet Skin Club */
 
-.tag>a {
+.tag a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -138,7 +137,7 @@ a {
     font-size: 16px;
     color: white;
     position: absolute;
-    bottom: 30px;
+    bottom: 25px;
     left: 25px;
 }
 
@@ -146,7 +145,7 @@ a {
 
 .chat {
     position: absolute;
-    bottom: 25px;
+    bottom: 15px;
     right: 25px;
 }
 
