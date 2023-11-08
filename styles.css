@@ -5,43 +5,29 @@
     border: 0;
 }
 
-
-
 header {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     box-sizing: border-box;
     width: 100%;
     font-family: 'League Spartan', sans-serif;
     font-size: 20px;
-    padding: 10px;
+    padding: 18px 30px;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 35px;
-    transition: all .5s linear;
-}
+/* Navbar grande */
 
-.logo {
-    display: flex;
-    margin: 45px;
-}
-
-/* Menú grande */
 nav {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    width: 70%;
     margin-top: 5px;
     background-color: white;
-    transition: all .5s linear;
-
+    transition: opacity .15s linear, color .15s linear;
 }
 
 nav>a {
@@ -49,11 +35,10 @@ nav>a {
     align-items: baseline;
     box-sizing: border-box;
     color: rgba(0, 157, 149, 1);
-    background-color: white;
-    gap: 8px;
+    background-color: transparent;
+    gap: 10px;
     padding: 15px 20px;
-    margin: 2px;
-    transition: all .25s linear;
+    background-color: transparent;
 }
 
 .triangulo {
@@ -82,41 +67,23 @@ nav a:hover,
     border-color: #e9989f transparent transparent transparent;
 }
 
-/* Menú desplegado */
-
-ul, a {
-    list-style: none;
-    text-decoration: none;
-}
-
-.abrir, .cerrar {
-    display: none;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* Resto del encabezado */
-
-.hueco {
-    display: inline-block;
-    box-sizing: border-box;
-    width: 5%;
-}
-
 .iconos {
     display: inline-flex;
     gap: 15px;
     align-items: baseline;
 }
+
+a {
+    text-decoration: none;
+}
+
+/* Navbar desplegado */
+
+.abrir,
+.cerrar {
+    display: none;
+}
+
 
 /* Resto */
 
@@ -129,35 +96,36 @@ ul, a {
     width: 100%;
     height: auto;
     aspect-ratio: 2.25;
-    background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .5)), url(https://planet-skin.com/cdn/shop/files/1_10_2000x.jpg?v=1698236253);
-    background-size: 100%;
+    background-size: cover;
+    animation: fondo 12s ease-in-out infinite;
 }
 
 .texto {
     display: inline-block;
     margin-left: 3vw;
-    margin-bottom: 2.5vw;
+    margin-bottom: 2vw;
     padding: 20px;
     color: white;
     letter-spacing: .2em;
     font-size: 18px;
     background-color: transparent;
-    transition: all .4s linear;
+    transition: all .3s linear;
 }
 
 .texto>p:first-child {
     font-size: 12px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 
 }
 
 .texto:hover {
     color: black;
     background-color: rgba(255, 255, 255, 0.623);
-    transition: all .4s linear;
+    transition: all .3s linear;
 }
 
 /* Tag Planet Skin Club */
+
 .tag>a {
     display: flex;
     justify-content: center;
@@ -170,16 +138,12 @@ ul, a {
     font-size: 16px;
     color: white;
     position: absolute;
-    bottom: 35px;
+    bottom: 30px;
     left: 25px;
 }
 
-img {
-    display: flex;
-    margin: 0px 12px 0px, 0px;
-}
-
 /* Chat */
+
 .chat {
     position: absolute;
     bottom: 25px;
@@ -189,43 +153,74 @@ img {
 /* Media queries */
 
 @media (max-width: 768px) {
-   
-    .abrir, .cerrar {
+
+    .abrir,
+    .cerrar {
         display: block;
-        background-color: red;
-        
+        border: 0px;
+        font-size: 30px;
+        background-color: transparent;
+        color: rgba(0, 157, 149, 1);
+        cursor: pointer;
+    }
+
+    .abrir:hover,
+    .cerrar:hover {
+        color: #5b5b5b;
+    }
+
+    header {
+        justify-content: space-between;
     }
 
     nav {
-        display: none; /* Oculta nav horizontal */
-        transition: all .25s linear;
+        opacity: 0;
+        visibility: hidden;
         display: flex;
         flex-direction: column;
         justify-content: start;
         align-items: start;
+        width: fit-content;
         position: absolute;
-        top: 0px;
+        top: -5px;
         bottom: 0px;
         left: 0px;
-        background-color: rgb(255, 255, 255);
+        background-color: white;
         padding: 2rem;
         gap: .5rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .3);
+        transition: opacity .15s linear, color .15s linear;
     }
 
-    nav>a {
-        padding: 10px 15px;
-        background-color: blue;
-    }
-
-    nav.visible {
+    .nav.visible {
         opacity: 1;
         visibility: visible;
     }
-
 }
 
-@media (max-width:480px) {
-    nav, nav>a {
-        background-color: #d8f9c8;
+@media (max-width: 480px) {
+    nav {
+        background-color: rgb(203, 255, 238);
+        transition: all .15s linear;
+    }
+
+    .triangulo>div {
+        border-color: rgb(203, 255, 238) transparent transparent transparent;
+    }
+}
+
+/* Animación imagen de fondo */
+
+@keyframes fondo {
+    0% {
+        background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .5)), url(https://planet-skin.com/cdn/shop/files/1_10_2000x.jpg?v=1698236253);
+    }
+
+    50% {
+        background-image: url(/imagenes/planet-skin.png);
+    }
+
+    100% {
+        background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .5)), url(https://planet-skin.com/cdn/shop/files/1_10_2000x.jpg?v=1698236253);
     }
 }
